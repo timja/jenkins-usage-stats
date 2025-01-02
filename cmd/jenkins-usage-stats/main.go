@@ -22,7 +22,7 @@ func run(ctx context.Context) error {
 	rootCmd := &cobra.Command{
 		Use:   "jenkins-usage-stats",
 		Short: "Command for running the Jenkins usage stats import and report generation",
-		Run: func(cmd *cobra.Command, args []string) {
+		Run: func(cmd *cobra.Command, _ []string) {
 			_ = cmd.Help()
 		},
 		DisableAutoGenTag: true,
