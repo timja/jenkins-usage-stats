@@ -108,6 +108,7 @@ endif
 .PHONY: lint
 lint: $(GOLANGCI_LINT)
 	@echo "--> Running golangci-lint"
+	golangci-lint --version
 	golangci-lint run
 
 .PHONY: make-reports-dir
