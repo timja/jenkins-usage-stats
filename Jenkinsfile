@@ -7,6 +7,7 @@ node('docker && linux-amd64') {
 
   stage('Lint') {
     env.GOPATH = "${pwd tmp: true}/gopath"
+    env.PATH="${env.GOPATH}/bin:${env.PATH}"
     sh "make lint"
   }
 
